@@ -31,8 +31,8 @@ namespace DEVAZARADO.Controllers
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Cliente>> GetById(int id)
         {
-            var model = await _context.Clientes.FirstOrDefaultAsync( x => x.Id.Equals(id));
-            if( model is null) return NotFound();
+            var model = await _context.Clientes.FirstOrDefaultAsync(x => x.Id.Equals(id));
+            if (model is null) return NotFound();
             return Ok(new { sucess = true, ismodel = model });
         }
         [HttpPost]
@@ -40,7 +40,7 @@ namespace DEVAZARADO.Controllers
         {
             if (!ModelState.IsValid) return NotFound();
 
-            await  _context.Clientes.AddAsync(model);
+            await _context.Clientes.AddAsync(model);
             await _context.SaveChangesAsync();
 
             return Ok(new { sucess = true, ismodel = model });
@@ -50,17 +50,18 @@ namespace DEVAZARADO.Controllers
         [HttpPut("{id:int}")]
         public async Task<ActionResult<Cliente>> Put(int? id, [FromBody] Cliente model)
         {
-            if( id != model.Id) return NotFound();
+            if (id != model.Id) return NotFound();
 
             if (id is null) return NotFound();
 
             var cliente = await _context.Clientes.FindAsync(id);
-            if (cliente is null) return NotFound(); 
+            if (cliente is null) return NotFound();
 
-          //  _context.Entry(cliente).State = EntityState.Modified;
+            //  _context.Entry(cliente).State = EntityState.Modified;
             _context.Entry(cliente).CurrentValues.SetValues(model);
+            await _context.SaveChangesAsync();
 
-            return Ok( new { sucess= true, ismodel=model});
+            return Ok(new { sucess = true, ismodel = model });
         }
 
         [HttpDelete("{id:int}")]
