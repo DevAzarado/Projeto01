@@ -21,13 +21,13 @@ namespace DEVAZARADO.Controllers
             _context = context;
         }
 
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<Cliente>>> Get()
-        //{
-        //    await Task.Delay(1000);
-        //    var cliente = await _context.Clientes.AsNoTracking().ToListAsync();
-        //    return Ok(cliente);
-        //}
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Cliente>>> Get()
+        {
+            await Task.Delay(1000);
+            var cliente = await _context.Clientes.AsNoTracking().ToListAsync();
+            return Ok(cliente);
+        }
 
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Cliente>> GetById(int id)
@@ -74,7 +74,7 @@ namespace DEVAZARADO.Controllers
         }
 
         [HttpGet("{page:int}/{pageSize:int}")]
-        public async Task<IActionResult> Get(int page = 0, int pageSize = 2)
+        public async Task<IActionResult> GetListOfCustomer(int page = 0, int pageSize = 2)
         {
             await Task.Delay(1000);
             var cliente = await _context.Clientes
