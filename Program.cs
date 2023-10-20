@@ -30,6 +30,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+var urlAdevAzarado = "http://localhost:4200";
+
+app.UseCors(op => op.AllowAnyOrigin()
+.AllowAnyMethod()
+.AllowAnyHeader()
+.WithOrigins(urlAdevAzarado));
+
 app.UseAuthorization();
 
 app.MapControllers();
