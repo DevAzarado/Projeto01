@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\GITHUB\\DEVAZARADO\\DEVAZARADO.csproj": {}
+    "C:\\dev\\GITHUB\\DEVAZARADO\\APIDOTNET\\DEVAZARADO.csproj": {}
   },
   "projects": {
-    "C:\\dev\\GITHUB\\DEVAZARADO\\DEVAZARADO.csproj": {
+    "C:\\dev\\GITHUB\\DEVAZARADO\\APIDOTNET\\DEVAZARADO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\GITHUB\\DEVAZARADO\\DEVAZARADO.csproj",
+        "projectUniqueName": "C:\\dev\\GITHUB\\DEVAZARADO\\APIDOTNET\\DEVAZARADO.csproj",
         "projectName": "DEVAZARADO",
-        "projectPath": "C:\\dev\\GITHUB\\DEVAZARADO\\DEVAZARADO.csproj",
+        "projectPath": "C:\\dev\\GITHUB\\DEVAZARADO\\APIDOTNET\\DEVAZARADO.csproj",
         "packagesPath": "C:\\Users\\Paloma Di Novais\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\GITHUB\\DEVAZARADO\\obj\\",
+        "outputPath": "C:\\dev\\GITHUB\\DEVAZARADO\\APIDOTNET\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Paloma Di Novais\\AppData\\Roaming\\NuGet\\NuGet.Config",
